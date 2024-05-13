@@ -1,0 +1,71 @@
+[
+    {
+        "robot_id": "R001",
+        "battery_level": 78,
+        "operational_status": "active",
+        "logs": [
+            {
+                "timestamp": "2024-05-09T08:30:00",
+                "message": "Robot started task A."
+            },
+            {
+                "timestamp": "2024-05-09T09:15:00",
+                "message": "Task A completed successfully."
+            }
+        ],
+        "idle_to_active_transitions": 1,
+        "active_to_idle_transitions": 3
+    },
+    {
+        "robot_id": "R001",
+        "battery_level": 75,
+        "operational_status": "active",
+        "logs": [
+            {
+                "timestamp": "2024-05-09T09:30:00",
+                "message": "Robot engaged in task B."
+            }
+        ],
+        "idle_to_active_transitions": 2,
+        "active_to_idle_transitions": 3
+    },
+    {
+        "robot_id": "R001",
+        "battery_level": 72,
+        "operational_status": "active",
+        "logs": [
+            {
+                "timestamp": "2024-05-09T10:00:00",
+                "message": "Robot resumed task C."
+            }
+        ],
+        "idle_to_active_transitions": 5,
+        "active_to_idle_transitions": 2
+    },
+    {
+        "robot_id": "R001",
+        "battery_level": 70,
+        "operational_status": "active",
+        "logs": [
+            {
+                "timestamp": "2024-05-09T11:00:00",
+                "message": "Low battery warning."
+            }
+        ],
+        "idle_to_active_transitions": 8,
+        "active_to_idle_transitions": 5
+    },
+    {
+        "robot_id": "R002",
+        "battery_level": 92,
+        "operational_status": "idle",
+        "logs": [
+            {
+                "timestamp": "2024-05-09T12:00:00",
+                "message": "Robot is waiting for new instructions."
+            }
+        ],
+        "idle_to_active_transitions": 2,
+        "active_to_idle_transitions": 1
+    }
+]

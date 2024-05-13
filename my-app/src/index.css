@@ -1,0 +1,457 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color:#1E0342 ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* color:#E1F7F5 ; */
+    background-color: #E1F7F5;
+    /* color:#1E0342 ; */
+}
+
+.bigConatiner
+{
+  width: 500px;
+  height: auto;
+  padding:20px;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  align-items: center;
+  /* background-color:#1E0342 ; */
+}
+.summaryConatiner
+{
+    height: auto;
+    width: 100% !important;
+    display: flex;
+    gap:5px;
+    flex-grow: 1;
+    justify-content:space-around;
+    /* flex-wrap: wrap; */
+    
+}
+.bigConatiner .last
+{
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+ flex-direction: row;
+ justify-content: space-evenly;
+ align-items: center;
+
+}
+.summaryElement
+{
+  width: 50%; 
+  background-color: #E1F7F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+   
+  
+    box-shadow: rgba(98, 160, 158, 0.25) 0px 54px 55px, rgba(117, 147, 154, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.bigConatiner .last
+{
+  width: 100% !important;
+}
+
+.summaryElement span
+{
+    padding: 5px;
+    font-size: 50px;
+}
+.summaryElement h3
+{
+    font-size: 20px;
+}
+
+.summaryElement p
+{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.robot-info-container {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    
+  }
+  
+  .robot-info-container h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .robot-info-container p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .robot-list
+  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .dashboard
+  {
+    padding: 10px;
+    text-align:center;
+}
+
+
+/* Robot component styles */
+.robot-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  height: 200px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.robot-card {
+  max-width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: rgba(9, 51, 67, 0.16) 0px 1px 4px;
+  margin-bottom: 15px;
+}
+
+.robot-heading {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.robot-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap:2px;
+}
+.status
+{
+  padding: 5px;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+.status-indicator 
+{
+  background-color:#1E0342;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white
+}
+.battery-level
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.logs{
+
+  width: 100% !important;
+  margin: 3px;
+}
+.logs h3
+{
+  background-color: #4D869C;
+  margin-bottom: 5px;
+}
+.logs ol
+{
+ margin-left: 20px;
+}
+
+.robot-content
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.robot-text
+{
+  padding-top: 10px;
+  height: 50%;
+}
+.robot-image
+{
+  /* height: 50%; */
+  overflow: hidden;
+  
+}
+.robot-card img
+{
+  width: 100%;
+  height: 100%;
+}
+
+h3
+{
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.icon
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.icon span
+{
+  padding: 10px 15px;
+  background-color: #7AB2B2;
+  border-radius: 5px;
+}
+.icon span:last-child
+{
+  display: flex;
+  justify-content: center;
+  gap:5px;
+  align-items: center;
+  background-color:#4D869C ;
+  justify-content: center;
+}
+
+/* StatusDropdown component styles */
+
+.status-dropdown {
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-end; /* Align to the right side of the parent */
+  margin-right: 20px; /* Add margin for spacing */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #E1F7F5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  right: 0; /* Position dropdown content to the right */
+}
+
+.dropdown-content button {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: #E1F7F5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #E1F7F5;
+}
+
+.chartContainer
+{
+  width: 100%;
+  padding: 10px;
+  background-color: #112933;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.chartContainer div
+{
+  width: 30%;
+  min-width: 100px;
+  min-height: 100%;
+}
+.chart-conatainer
+{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.chart-conatainer h2
+{
+  padding: 5px;
+  color: white;
+  font-weight: 900;
+}
+.outercontainer
+{
+  display: flex;
+  height: 300px;
+  justify-content:space-around;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container .chart
+{
+  width: auto;
+  height: 100% !important;
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.container .chart div
+{
+  width: 50%;
+  height: 100%;
+}
+
+.chart-conatainer .dynamicChart
+{
+  position: relative;
+  min-width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  background-color:#E1F7F5;
+
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dynamicChart .chart
+{
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  /* min-height: 100% !important; */
+}
+
+.line-chart-container
+{
+  /* background-color: #112933; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 100%;
+  min-height: 100%;
+}
+.dynamicChartLine
+{
+  width: 100%;
+  height: 100%; 
+}
+.chartLine
+{
+  min-width: 400px;
+  min-height: 200px;
+}
+
+
+@media (max-width: 968px) {
+ .outercontainer
+ {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: auto;
+ }
+ .bigConatiner
+ {
+  align-self: center;
+ }
+ .chartContainer
+ {
+  flex-direction: column;
+  align-items: center;
+ }
+ .chartContainer div
+ {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .dynamicChart
+ {
+ min-height: auto;
+ }
+}
+
+@media (max-width:510px)
+{
+  .bigConatiner
+  {
+    width: 100%;
+    background-color: #112933;
+  }
+  .line-chart-container
+  {
+    min-width: 100vw;
+  }
+  .chartLine
+  {
+    min-width: 100%;
+  }
+}

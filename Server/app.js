@@ -1,31 +1,37 @@
-const express = require('express');
+const express = require("express");
+const mongoose = require("mongoose");
+require("dotenv").config();
+const cors = require('cors')
+
+
+
+const robotRouter = require("./routers/robotRouter");
+
 const app = express();
-const PORT = 3000; // Port number for your server
+const port = process.env.PORT || 3000;
 
+app.use(express.json());
+app.use(cors());
 
-// Define a route
-app.get('/', (req, res) => {
-  res.send('Hello, this is your Node.js server!');
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+
+// Define routes
+app.get("/", (req, res) => {
+  res.send("Welcome to the Robot Dashboard API");
 });
 
-const connectDB=require("./db/connect")
-const uploadDataFromFile=require("./populate")
+app.use(express.json());
 
+// Use the robotRouter for '/api' routes
+app.use("/api", robotRouter);
 
-const jsonFilePath = './jsondata.json'; // Replace with your JSON file path
-uploadDataFromFile(jsonFilePath);
-
-const start = async () => {
-    try {
-      await connectDB("mongodb+srv://dnyan_7499:dnyan_7499$123@cluster0.z6h9eyx.mongodb.net/internshala?retryWrites=true&w=majority&appName=Cluster0");
-      app.listen(PORT, () =>
-        console.log(`Server is listening on port ${PORT}...`)
-      );
-    } catch (error) {
-      console.log("error in connection");
-      console.log(error);
-    }
-  };
-  
-  start();
-
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
